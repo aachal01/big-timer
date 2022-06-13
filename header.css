@@ -15,7 +15,7 @@ header .options button {
     background: none;
     border: none;
     color: #ffcc00;
-    font-size: 18px;
+    font-size: 22px;
     transition: transform 200ms ease-in-out;
 
 }
@@ -23,4 +23,16 @@ header .options button {
 
 header .options button:hover{
     transform: scale3d(1.1, 1.1, 1.1);
+}
+
+
+#fullscreen{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#fullscreen img{
+    height: 40px;
+    width: 40px;
 }

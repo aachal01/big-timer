@@ -30,24 +30,24 @@ buttonMinus.addEventListener("click",() => {
 })
 
 let intervalID;
-const hideButton = (button) => button.style.display = "none"
-const showButton = (button) => button.style.display = "initial"
+const hideElement = (button) => button.style.display = "none"
+const showElement = (button) => button.style.display = "initial"
 
 const startButton = document.getElementById("start")
 startButton.addEventListener("click", ()=> {
     updateTimer()
     intervalID = setInterval(updateTimer, 1000)
-    hideButton(startButton)
-    showButton(pauseButton)
-    showButton(resetButton)
+    hideElement(startButton)
+    showElement(pauseButton)
+    showElement(resetButton)
 })
 
 const pauseButton = document.getElementById("pause")
 pauseButton.addEventListener("click", ()=> {
     clearInterval(intervalID)
-    hideButton(pauseButton)
-    showButton(startButton)
-    showButton(resetButton)
+    hideElement(pauseButton)
+    showElement(startButton)
+    showElement(resetButton)
 })
 
 const resetButton = document.getElementById("reset")
@@ -55,7 +55,32 @@ resetButton.addEventListener("click", ()=> {
     startTime = 120
     updateTimer()
     clearInterval(intervalID)
-    hideButton(resetButton)
-    hideButton(pauseButton)
-    showButton(startButton)
+    hideElement(resetButton)
+    hideElement(pauseButton)
+    showElement(startButton)
+})
+
+
+const fullscreen = document.getElementById("fullscreen")
+fullscreen.addEventListener("click", () => {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+})
+
+const fullscreenenterbutton = document.getElementById("fullscreen-enter-button")
+const fullscreenexitbutton = document.getElementById("fullscreen-exit-button")
+document.documentElement.addEventListener("fullscreenchange", (event) => {
+    if (document.fullscreenElement === document.documentElement) {
+        hideElement(fullscreenenterbutton)
+        showElement(fullscreenexitbutton)
+
+    }else{
+        hideElement(fullscreenexitbutton)
+        showElement(fullscreenenterbutton)
+    }
 })
