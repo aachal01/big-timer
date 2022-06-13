@@ -1,0 +1,38 @@
+.buttons{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.buttons button {
+    background-color: #ffcc00;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 16px;
+    border-radius: 10px 100px / 120px;
+    border: none;
+    transition: transform 250ms ease-in-out;
+}
+
+.buttons button:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.buttons-left{
+    left: 2vw;
+}
+
+.buttons-right{
+    right: 2vw;
+}
+
+#pause{
+    display: none;
+}
+
+#reset{
+    display: none;
+}

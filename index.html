@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Timer</title>
+    <link rel="shortcut icon" href="images/16.png" type="image/png" sizes = "16x16">
+    <link rel="shortcut icon" href="images/32.png" type="image/png" sizes = "32x32">
+    <link rel="shortcut icon" href="images/72.png" type="image/png" sizes = "72x72">
+    <link rel="shortcut icon" href="images/96.png" type="image/png" sizes = "96x96">
+    <link rel="shortcut icon" href="images/128.png" type="image/png" sizes = "128x128">
+    <link rel="shortcut icon" href="images/192.png" type="image/png" sizes = "192x192">
+    <link rel="shortcut icon" href="images/512.png" type="image/png" sizes = "512x512">
+    <style>
+        *{
+            font-family: system-ui;
+        }
+    html{
+        background-color: black;
+        color: aliceblue;
+    }
+    </style>
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="timer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@200;400&display=swap" rel="stylesheet">
+    
+   
+
+</head>
+<body>
+    <header>
+        <div class="options options-left">
+            <button>Settings</button>
+        </div>
+        <div class="options options-right">
+            <button>Repeat</button>
+            <button>Fullscreen</button>
+        </div>
+    </header>
+
+    <div class="timer" id="timer">00:00</div>
+
+    <div class="buttons buttons-left"> 
+        <button id = "start">Start</button>
+        <button id = "pause">Pause</button>
+        <button id = "reset">Reset</button>
+    </div>
+
+    <div class="buttons buttons-right">
+        <button id="button-plus">+</button>
+        <button id="button-minus">-</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
